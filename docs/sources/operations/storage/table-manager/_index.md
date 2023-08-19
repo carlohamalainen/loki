@@ -207,6 +207,10 @@ The Table Manager can be executed in two ways:
 When Loki runs in [monolithic mode]({{< relref "../../../get-started/deployment-modes" >}}),
 the Table Manager is also started as component of the entire stack.
 
+For some storage systems (e.g. Cassandra), please add `table-manager` to the targets on startup:
+```bash
+./loki-linux-amd64 -config.file=loki-local-config.yaml -target=all,table-manager
+```
 
 ### Microservices mode
 
